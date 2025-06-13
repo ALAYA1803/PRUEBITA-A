@@ -9,10 +9,15 @@ const { t } = useI18n()
 
 const titleKeyMap = {
   Home:               'home',
+  UserHome:           'home',
+  AgencyHome:         'home',
   ExperienceManager:  'experienceManager',
   Reservations:       'reservations',
   Queries:            'queries',
-  AgencyProfile:      'agencyProfile'
+  AgencyProfile:      'agencyProfile',
+  Favorites:          'favorites',
+  Itineraries:        'itineraries',
+  UserProfile:        'userProfile'
 }
 
 const subtitle = computed(() => {

@@ -5,7 +5,10 @@
     "experienceManager": "Gestión de Experiencias",
     "reservations": "Reservas",
     "queries": "Consultas",
-    "agencyProfile": "Perfil de Agencia"
+    "agencyProfile": "Perfil de Agencia",
+    "favorites": "Favoritos",
+    "itineraries": "Itinerarios",
+    "userProfile": "Perfil de Usuario"
   },
   "home": {
     "greeting": "Hola, {user}",
