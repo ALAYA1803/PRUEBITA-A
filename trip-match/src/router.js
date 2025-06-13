@@ -11,6 +11,9 @@ import AgencyProfilePage from '@/Agency/Presentation/agency-profile.page.vue'
 import ReservationsView  from '@/Reservations/Presentation/reservations-view.page.vue'
 import ExperienceSearchResults from "@/Experience/Presentation/experience-search-results.page.vue";
 import QueryView         from "@/Queries/Presentation/query-view.vue";
+import FavoritesView     from '@/User/Presentation/favorites-view.page.vue'
+import ItinerariesView   from '@/User/Presentation/itineraries-view.page.vue'
+import UserProfilePage   from '@/User/Presentation/user-profile.page.vue'
 
 const routes = [
     {
@@ -47,6 +50,9 @@ const routes = [
             { path: 'agency/home',          name: 'AgencyHome',     component: HomeView },
             { path: 'agency/profile',       name: 'AgencyProfile',  component: AgencyProfilePage },
             { path: 'reservations',         name: 'Reservations',   component: ReservationsView },
+            { path: 'favorites',            name: 'Favorites',      component: FavoritesView },
+            { path: 'itineraries',          name: 'Itineraries',    component: ItinerariesView },
+            { path: 'user/profile',         name: 'UserProfile',    component: UserProfilePage },
             { path: 'search',               name: 'ExperienceSearch', component: ExperienceSearchResults},
             { path: 'queries',              name: 'Queries', component: QueryView },
         ]

@@ -29,20 +29,31 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits } from 'vue'
+import { defineProps, defineEmits, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const props = defineProps({ isCollapsed: Boolean })
 const emit = defineEmits(['toggle'])
 const { t } = useI18n()
 
-const links = [
-  { label: 'sidevar.home',             path: '/',                 icon: 'pi pi-home'           },
+const isAgency = localStorage.getItem('isAgency') === 'true'
+
+const agencyLinks = [
+  { label: 'sidevar.home',             path: '/agency/home',    icon: 'pi pi-home'           },
   { label: 'sidevar.experienceManager',path: '/manageExperience', icon: 'pi pi-objects-column' },
   { label: 'sidevar.reservations',     path: '/reservations',     icon: 'pi pi-pen-to-square'  },
   { label: 'sidevar.queries',          path: '/queries',          icon: 'pi pi-search'         },
   { label: 'sidevar.agencyProfile',    path: '/agency/profile',   icon: 'pi pi-building'       }
 ]
+
+const touristLinks = [
+  { label: 'sidevar.home',        path: '/user/home',   icon: 'pi pi-home' },
+  { label: 'sidevar.favorites',   path: '/favorites',   icon: 'pi pi-heart' },
+  { label: 'sidevar.itineraries', path: '/itineraries', icon: 'pi pi-calendar' },
+  { label: 'sidevar.userProfile', path: '/user/profile', icon: 'pi pi-user' }
+]
+
+const links = computed(() => (isAgency ? agencyLinks : touristLinks))
 </script>
 
 <style scoped>
